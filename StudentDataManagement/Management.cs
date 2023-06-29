@@ -39,5 +39,13 @@ namespace StudentDataManagement
                 Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
             }
         }
+
+        public static void SortByDescOrder(List<Student> studentList)
+        {
+            foreach (Student student in studentList.OrderByDescending(x => x.Age))
+            {
+                Display(student);
+            }
+        }
     }
 }
