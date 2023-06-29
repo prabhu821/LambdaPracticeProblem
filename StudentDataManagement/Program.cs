@@ -10,7 +10,7 @@
             while (flag)
             {
                 Console.WriteLine("\nEnter option to choose \n1.Add Students \n2.Display Students \n3.Retrieve age btw 12 and 18 " +
-                    "\n4.Sort Age by descending order \n5.Exit");
+                    "\n4.Sort Age by descending order \n5.Retrieve By Address \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -25,6 +25,9 @@
                         break;
                     case 4:
                         Management.SortByDescOrder(students);
+                        break;
+                    case 5:
+                        Management.RetrievingByAddress(students);
                         break;
                     default:
                         flag = false;

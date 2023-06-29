@@ -47,5 +47,19 @@ namespace StudentDataManagement
                 Display(student);
             }
         }
+
+        public static void RetrievingByAddress(List<Student> studentList)
+        {
+            var studentsByAddress = studentList.GroupBy(student => student.Address);
+            foreach (var group in studentsByAddress)
+            {
+                Console.WriteLine($"Address: {group.Key}");
+                foreach (Student student in group)
+                {
+                    Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Phone Number: {student.PhoneNumber}, Age: {student.Age}");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
