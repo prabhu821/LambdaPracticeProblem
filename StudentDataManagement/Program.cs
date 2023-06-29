@@ -9,7 +9,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nEnter option to choose \n1.Add Students \n2.Display Students \n3.Exit");
+                Console.WriteLine("\nEnter option to choose \n1.Add Students \n2.Display Students \n3.Retrieve age btw 12 and 18 \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -18,6 +18,9 @@
                         break;
                     case 2:
                         Management.DisplayStudentData(students);
+                        break;
+                    case 3:
+                        Management.RetrieveAgeBtwRange(students);
                         break;
                     default:
                         flag = false;

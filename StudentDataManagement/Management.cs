@@ -31,5 +31,13 @@ namespace StudentDataManagement
                 Display(student);
             }
         }
+
+        public static void RetrieveAgeBtwRange(List<Student> studentList)
+        {
+            foreach (Student student in studentList.FindAll(x => x.Age >= 12 && x.Age <= 18))
+            {
+                Console.WriteLine($"Student with ID is: {student.Id} ,Name: {student.Name} ,PhoneNumber: {student.PhoneNumber} ,Address: {student.Address} ,Age: {student.Age}");
+            }
+        }
     }
 }
