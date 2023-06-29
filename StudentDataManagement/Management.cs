@@ -61,5 +61,13 @@ namespace StudentDataManagement
                 Console.WriteLine();
             }
         }
+
+        public static void FirstThreeStudents(List<Student> studentList)
+        {
+            foreach (Student student in studentList.Take(3).ToList())
+            {
+                Display(student);
+            }
+        }
     }
 }
