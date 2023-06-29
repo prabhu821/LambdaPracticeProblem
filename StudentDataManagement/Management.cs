@@ -20,7 +20,7 @@ namespace StudentDataManagement
             studentList.Add(new Student(3, "Ajay", "8527419630", "Kanpur", 11));
             studentList.Add(new Student(4, "Sam", "8525643212", "Delhi", 12));
             studentList.Add(new Student(5, "Rahul", "8000000000", "Shimla", 18));
-            studentList.Add(new Student(6, "Rae", "8574195218", "Lucknow", 15));
+            studentList.Add(new Student(6, "Sam", "8574195218", "Lucknow", 15));
             studentList.Add(new Student(7, "Jack", "8741741741", "Kochi", 20));
             Console.WriteLine("Records Added");
         }
@@ -65,6 +65,16 @@ namespace StudentDataManagement
         public static void FirstThreeStudents(List<Student> studentList)
         {
             foreach (Student student in studentList.Take(3).ToList())
+            {
+                Display(student);
+            }
+        }
+
+        public static void SearchForParticularName(List<Student> studentList)
+        {
+            Console.WriteLine("Enter name");
+            string searchName=Console.ReadLine();
+            foreach (Student student in studentList.FindAll(x => x.Name == searchName))
             {
                 Display(student);
             }
